@@ -6,7 +6,7 @@ function jump(){
     }
         setTimeout(function(){
         character.classList.remove("animate");
-    },500);
+    },1000);
 }
 
 var checkDead = setInterval(function(){
@@ -14,6 +14,8 @@ var checkDead = setInterval(function(){
     parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     var blockLeft = 
     parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+
+    //collision detection
     if(blockLeft<20 && blockLeft>0 && characterTop>=130){
         block.style.animation = "none";
         block.style.display = "none";
